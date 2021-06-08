@@ -1,0 +1,87 @@
+<html>
+  <head><title>CSS Hover Selector, Transition and Animation</title>
+  <style>
+    body{
+        margin: 0px;
+    }
+    main{
+        
+        height: 100vh;
+        display: grid;
+
+        grid-template-rows: 25% auto 15%;
+        grid-template-columns: 75% auto;
+
+        grid-template-areas:
+          "header header"
+          "content sidebar"
+          "footer footer"
+      }
+
+    header{
+        background-color: #69a320;
+        grid-area: header;
+
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    section{
+      background-color: #7ed957;
+      grid-area: content;
+    }
+    
+    aside{
+      background-color: d6d899;
+      grid-area: sidebar;
+    }
+    
+    footer{
+      background-color: #3b5a0e;
+      grid-area: footer;
+
+      animation-name: colorsplash;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+   @keyframes colorsplash{
+     0%{background-color: yellow;}
+     25%{background-color: black;}
+     50%{background-color: red;}
+     100%{background-color: #3b5a0e;}
+     
+   }
+
+    nav{
+      padding: 10px;
+      font-size: 1.5em;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      transition: background-color 1s ease .2s, color 1.5s ease .5s;
+
+      
+    }
+
+    nav:hover{
+      background-color: darkgreen;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>Home</nav>
+        <nav>About</nav>
+        <nav>Contact</nav>
+      </header>
+      <section></section>
+      <aside></aside>
+      <footer></footer>
+    </main>
+  </body>
+</html>

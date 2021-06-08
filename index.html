@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Final Layout</title>
+
+    <link rel="stylesheet" href="styles/cards.css"/>
+    <style>
+    
+    body{
+        margin: 0px;
+    }
+    
+    main{
+        height: 100vh;
+        display: grid;
+
+        grid-template-rows: 15% auto 10%;
+        grid-template-columns: 75% auto;
+
+        grid-template-areas:
+          "header header"
+          "content sidebar"
+          "footer footer"
+      }
+
+    header{
+        background-color: #69a320;
+        grid-area: header;
+
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    section{
+      background-color: #7ed957;
+      grid-area: content;
+
+      padding: 2%;
+    }
+    
+    aside{
+      background-color: #d6d899;
+      grid-area: sidebar;
+      
+      padding: 10%;
+    }
+    
+    footer{
+      background-color: #3b5a0e;
+      grid-area: footer;
+    }
+
+    nav{
+      padding: 15px;
+      font-size: 1.5em;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      transition: background-color 1s ease .2s, color 1.5s ease .5s;
+
+      
+    }
+
+    nav:hover{
+      background-color: darkgreen;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: white;
+    }
+
+    .other-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .other-links div{
+        padding: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: whitesmoke;
+
+        transition: transform 1s ease .1s,background-color 1s ease .1s;
+    }
+
+    .other-links div:hover{
+        background-color: white;
+        transform: rotate(2deg) scale(1.2);
+    }
+
+    @media only screen and (max-width : 600px){
+    main{
+        
+        grid-template-rows: 15% 15% auto 10%;
+        grid-template-columns: 100%;
+
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "content" 
+          "footer"
+      }
+
+    aside{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        padding: 5%;
+    }
+      
+
+    .other-links{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .other-links div{
+        padding: 5px;
+        background-color:transparent;
+        transition: transform 1s ease .1s;
+    }
+
+ }
+
+  </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>Home</nav>
+        <nav>About</nav>
+        <nav>Contact</nav>
+      </header>
+      <section>
+        <h2>Wild Animals</h2>
+        <div class="cards">
+            <!--Card 1-->
+            <div class="card">
+        
+                <div class="card-img">
+                    <img src="https://earthnworld.com/wp-content/uploads/2018/11/African-Lion-1024x678.jpg" alt="">
+                </div>
+                
+                <div class="card-desc">
+                    <h1>African Lion</h1>
+                    <p>Lions are viewed as the rulers of the wilderness, 
+                    and in all respects which is all well and good. 
+                    The African lion has staggering velocity, 
+                    well sharpened sharp paws and teeth to assault a conceivable prey. 
+                    They are the greatest of the African carnivores. 
+                    The females, for the most part, do the chasing, and the guys are sluggish, 
+                    caught up with securing the pride.</p>
+                </div>
+           
+            </div>
+        
+            <!--Card 2-->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://earthnworld.com/wp-content/uploads/2018/01/CAPE-BUFFALO-1-1024x862.jpg" alt="">
+                </div>
+                <div class="card-desc">
+                    <h1>Cape Buffalo</h1>
+                    <p>Otherwise called the African bison, this is an especially forceful occupant of the African meadows. The Cape Buffalo is the main individual from the bison and steers clan that happens normally in Africa. Cape wild ox has been known to charge exploited people without incitement. With more than 2,000 pounds of weight and the capacity to charge at 40 miles 60 minutes, they are a standout amongst the most hazardous toughest animals to experience.</p>
+                </div>
+            </div>
+        
+            <!--Card 3-->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://earthnworld.com/wp-content/uploads/2017/09/Hyena.jpg" alt="Hyenas">
+                </div>
+                <div class="card-desc">
+                    <h1>Hyenas</h1>
+                    <p>The hyena is Africa’s most regular expansive meat eater. Weighing from 90 to 190 pounds, they are presumed to be weak and meek however can be striking and risky, assaulting creatures and people. Unique in relation to most different creatures, female spotted hyenas are predominant over the guys and exceed them by around 3 pounds. The spotted hyena is an apt seeker yet additionally a scrounger. Hyenas are pack creatures that reason various human fatalities consistently. They’re physically extensive and forceful and have a chomp that is developed for searching, so can without much of a stretch smash bone and tear substance.</p>
+                </div>
+            </div>
+        
+        </div>
+      </section>
+      <aside>
+          <div class="other-links">
+            <div><a href="cakes.html" target="_blank">HTML Lists</a></div>  
+            <div><a href="favorite_cartoon.html" target="_blank">Fonts</a></div>
+            <div><a href="blue_whale.html" target="_blank">Colors</a></div>
+            <div><a href="borders_padding_margin.html" target="_blank">Borders, Padding & Margin</a></div>
+            <div><a href="semantic.html" target="_blank">Semantic Tags</a></div>  
+            <div><a href="flexbox.html" target="_blank">CSS Flexbox</a></div>
+            <div><a href="css_grid.html" target="_blank">CSS Grid</a></div>
+            <div><a href="hover.html" target="_blank">CSS Hover Selector</a></div>
+            <div><a href="css_variables.html" target="_blank">CSS Variables</a></div>
+          </div>
+      </aside>
+      <footer>Created by Sunil Nair</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+  <head><title>CSS Grid - Step 1</title>
+  <style>
+    body{
+        margin: 0px;
+    }
+.parent{
+        
+        height: 100vh;
+        display: grid;
+
+        grid-template-rows: 25% auto 15%;
+        grid-template-columns: 75% auto;
+
+        grid-template-areas:
+          "header header"
+          "content sidebar"
+          "footer footer"
+      }
+
+.header{
+        background-color: #69a320;
+        grid-area: header;
+
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+.content{
+      background-color: #7ed957;
+      grid-area: content;
+    }
+    
+.sidebar{
+      background-color: d6d899;
+      grid-area: sidebar;
+    }
+    
+.footer{
+      background-color: 3b5a0e;
+      grid-area: footer;
+    }
+
+.nav{
+    padding: 25px;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="header">
+        <div class="nav">Home</div>
+        <div class="nav">About</div>
+        <div class="nav">Contact</div>
+      </div>
+      <div class="content">Content</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

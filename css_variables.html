@@ -1,0 +1,104 @@
+<html>
+  <head><title>CSS Variables</title>
+  <style>
+    
+    :root{
+     --fav_color:   #69a320;
+     --fav_font: Verdana, Geneva, Tahoma, sans-serif;
+     --fav_font_size: 1.5em;
+     --fav_padding: 25px;
+    }
+    
+    body{
+        margin: 0px;
+    }
+        main{
+        
+        height: 100vh;
+        display: grid;
+
+        grid-template-rows: 25% auto 15%;
+        grid-template-columns: 75% auto;
+
+        grid-template-areas:
+          "header header"
+          "content sidebar"
+          "footer footer"
+      }
+
+    header{
+        background-color: var(--fav_color);
+        grid-area: header;
+
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    section{
+      background-color: #7ed957;
+      grid-area: content;
+    }
+
+    article{
+    padding: var(--fav_padding);
+}
+
+    article h3{
+    font-family: var(--fav_font);
+    font-size: var(--fav_font_size);
+}
+
+    article p{
+    font-family: var(--fav_font);
+}   
+    aside{
+      background-color: #d6d899;
+      grid-area: sidebar;
+    }
+    
+    footer{
+      background-color: var(--fav_color);
+      grid-area: footer;
+    }
+
+    nav{
+    padding: var(--fav_padding);
+    font-size: var(--fav_font_size);
+    font-family: var(--fav_font);
+}
+  </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>Home</nav>
+        <nav>About</nav>
+        <nav>Contact</nav>
+      </header>
+      <section id="content">
+          <article>
+            <h3>Title 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                  Ex exercitationem natus quasi asperiores excepturi blanditiis hic 
+                  nesciunt vero unde labore quidem at vel tempora, quo cumque praesentium. 
+                  Cumque, necessitatibus aperiam? Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit. Pariatur mollitia, corrupti laborum illo odio dolores 
+                  quam reprehenderit distinctio libero quisquam, 
+                  velit repellendus hic unde cupiditate labore sint aliquid quaerat earum.</p>
+              
+            <h3>Title 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                      Ex exercitationem natus quasi asperiores excepturi blanditiis hic 
+                      nesciunt vero unde labore quidem at vel tempora, quo cumque praesentium. 
+                      Cumque, necessitatibus aperiam? Lorem ipsum, dolor sit amet consectetur 
+                      adipisicing elit. Pariatur mollitia, corrupti laborum illo odio dolores 
+                      quam reprehenderit distinctio libero quisquam, 
+                      velit repellendus hic unde cupiditate labore sint aliquid quaerat earum.</p>
+          </article>
+      </section>
+      <aside></aside>
+      <footer></footer>
+    </main>
+  </body>
+</html>

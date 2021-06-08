@@ -1,0 +1,19 @@
+body{
+    background-color:lightblue;
+  }
+  h1{
+    color:yellow;
+  }
+  h2{
+    color:red;
+  }
+  p{
+    color:white;
+  }
+  
+  img{
+      width: 50%;
+  }
+  video{
+      width: 50%;
+  }
